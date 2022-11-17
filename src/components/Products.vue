@@ -1,13 +1,21 @@
 <template>
+        
     <div class="product">
         <a href="/tr_TR/men/shoes/twins/camper-twins-K100743-025">
             <div class="gridPhoto">
                 <div class="grid-images">
-                    <picture class="style-image">
+                    <picture class="style-image" 
+                        v-if="show_default" @mouseover="show_default=false" @mouseleave="show_default=true" >
+
                         <img src="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_CF.jpg"
                             class="style-image" width="326" height="489">
                     </picture>
-                    <picture class="style-image_hover">
+
+
+                    <picture class="style-image_hover" 
+                        v-if="!show_default" 
+                        @mouseleave="show_default=true">
+
                         <img src="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_LF.jpg"
                             class="style-image_hover" loading="eager">
                     </picture>
@@ -20,7 +28,7 @@
                     <span class="size_number">43</span>
                     <span class="size_number">44</span>
                     <span class="size_number">45</span>
-                    <span class="size_number">46</span>
+                    <span class="size_number size_number_not_available">46</span>
                 </div>
             </div>
             <div class="grid-content">
@@ -71,6 +79,10 @@
 .size_number{
     padding: 2% 5%;
 }
+.size_number_not_available{
+    color: #919191;
+    background: url(@/assets/del-line-2.svg) 50% no-repeat;
+}
 .gridPhoto {
     display: grid;
     grid-template-columns: 1fr;
@@ -99,8 +111,8 @@
     transition: opacity .3s ease-in;
 }
 
+
 .style-image_hover {
-    visibility: hidden;
     min-width: 100%;
 }
 
@@ -127,6 +139,11 @@
 
 <script>
 export default {
-    name: "product-vue"
+    name: "product-vue",
+    data(){
+        return{
+            show_default:true,
+        }
+    },
 }
 </script>

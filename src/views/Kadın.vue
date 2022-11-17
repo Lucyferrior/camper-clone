@@ -13,6 +13,9 @@
 <style>
 #women {
     display: flex;
+    row-gap: 0;
+    overflow: hidden;
+    flex-flow: row wrap;
 }
 </style>
 <script>

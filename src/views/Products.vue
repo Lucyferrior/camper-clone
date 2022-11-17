@@ -1,6 +1,9 @@
 <template>
-    <div id="product_container">
-        <ProductsVue v-for="item in products" v-bind:key="item.id" :product="item" />
+    <div>
+        <HeaderVue/>
+        <div id="product_container">
+            <ProductsVue v-for="item in products" v-bind:key="item.id" :product="item" />
+        </div>
     </div>
 </template>
 <style>
@@ -13,6 +16,7 @@
 </style>
 <script>
 import ProductsVue from '@/components/Products.vue';
+import HeaderVue from '@/components/Header.vue';
 export default {
     name: "product-vue",
     data() {
@@ -43,7 +47,8 @@ export default {
         };
     },
     components: {
-        ProductsVue
+        ProductsVue,
+        HeaderVue
     }
 }
 </script>

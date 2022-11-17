@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import Products from '@/views/Products.vue'
+import Products from '@/views/ProductsView.vue'
 Vue.use(VueRouter)
 
 const routes = [

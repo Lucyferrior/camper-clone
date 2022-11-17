@@ -15,7 +15,7 @@
 }
 </style>
 <script>
-import ProductsVue from '@/components/Products.vue';
+import ProductsVue from '@/components/ProductComponent.vue';
 import HeaderVue from '@/components/Header.vue';
 export default {
     name: "product-vue",

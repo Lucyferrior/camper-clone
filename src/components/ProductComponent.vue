@@ -1,14 +1,22 @@
 <template>
+        
     <div class="product">
-        <a href="/tr_TR/men/shoes/twins/camper-twins-K100743-025">
+        <a href="#">
             <div class="gridPhoto">
                 <div class="grid-images">
-                    <picture class="style-image">
-                        <img src="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_CF.jpg"
+                    <picture class="style-image" 
+                        v-if="show_default" @mouseover="show_default=false" @mouseleave="show_default=true" >
+
+                        <img v-bind:src="product.src_link_default"
                             class="style-image" width="326" height="489">
                     </picture>
-                    <picture class="style-image_hover">
-                        <img src="https://cloud.camper.com/is/image/JGxvY2F0b3IzJA==/K100743-025_LF.jpg"
+
+
+                    <picture class="style-image_hover" 
+                        v-if="!show_default" 
+                        @mouseleave="show_default=true">
+
+                        <img v-bind:src="product.src_link_second"
                             class="style-image_hover" loading="eager">
                     </picture>
                 </div>
@@ -20,12 +28,12 @@
                     <span class="size_number">43</span>
                     <span class="size_number">44</span>
                     <span class="size_number">45</span>
-                    <span class="size_number">46</span>
+                    <span class="size_number size_number_not_available">46</span>
                 </div>
             </div>
             <div class="grid-content">
-                <p class="name">Twins</p>
-                <p class="price">₺2.499</p>
+                <p class="name">{{ product.title }}</p>
+                <p class="price">₺{{ product.price }}</p>
                 <p class="item-info">4 RENK</p>
             </div>
         </a>
@@ -71,6 +79,10 @@
 .size_number{
     padding: 2% 5%;
 }
+.size_number_not_available{
+    color: #919191;
+    background: url(@/assets/del-line-2.svg) 50% no-repeat;
+}
 .gridPhoto {
     display: grid;
     grid-template-columns: 1fr;
@@ -99,8 +111,8 @@
     transition: opacity .3s ease-in;
 }
 
+
 .style-image_hover {
-    visibility: hidden;
     min-width: 100%;
 }
 
@@ -127,6 +139,21 @@
 
 <script>
 export default {
-    name: "product-vue"
+    name: "product-vue",
+    data(){
+        return{
+            show_default:true,
+        }
+    },
+    props:{
+        product: {
+            type: Object,
+            id: Number,
+            title: String,
+            price:String,
+            src_link_default: String,
+            src_link_second: String
+        }
+    }
 }
 </script>

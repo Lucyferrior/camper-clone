@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import women from '@/views/Kadın.vue'
+import Products from '@/views/ProductsView.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -13,7 +13,12 @@ const routes = [
   {
     path: '/women',
     name: 'women',
-    component: women
+    component: Products
+  },
+  {
+    path: '/men',
+    name: 'men',
+    component: Products
   },
 ]
 

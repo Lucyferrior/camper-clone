@@ -1,12 +1,10 @@
 <template>
         
-    <div class="product">
+    <div class="product" @mouseover="show_default=false" @mouseleave="show_default=true">
         <a href="#">
             <div class="gridPhoto">
                 <div class="grid-images">
-                    <picture class="style-image" 
-                        v-if="show_default" @mouseover="show_default=false" @mouseleave="show_default=true" >
-
+                    <picture class="style-image" >
                         <img v-bind:src="product.src_link_default"
                             class="style-image" width="326" height="489">
                     </picture>
@@ -21,13 +19,13 @@
                     </picture>
                 </div>
                 <div class="sizes">
-                    <span class="size_number">39</span>
-                    <span class="size_number">40</span>
-                    <span class="size_number">41</span>
-                    <span class="size_number">42</span>
-                    <span class="size_number">43</span>
-                    <span class="size_number">44</span>
-                    <span class="size_number">45</span>
+                    <span class="size_number size_number_available">39</span>
+                    <span class="size_number size_number_available">40</span>
+                    <span class="size_number size_number_available">41</span>
+                    <span class="size_number size_number_available">42</span>
+                    <span class="size_number size_number_available">43</span>
+                    <span class="size_number size_number_available">44</span>
+                    <span class="size_number size_number_available">45</span>
                     <span class="size_number size_number_not_available">46</span>
                 </div>
             </div>
@@ -46,6 +44,7 @@
     max-width: 50%;
     position: relative;
 }
+
 
 @media screen and (min-width: 768px) {
     .product {
@@ -82,6 +81,9 @@
 .size_number_not_available{
     color: #919191;
     background: url(@/assets/del-line-2.svg) 50% no-repeat;
+}
+.size_number_available:hover{
+    text-decoration: underline;
 }
 .gridPhoto {
     display: grid;

@@ -1,39 +1,37 @@
 <template>
-        
-    <div class="product" @mouseover="show_default=false" @mouseleave="show_default=true">
-        <a href="#">
-            <div class="gridPhoto">
-                <div class="grid-images">
-                    <picture class="style-image" >
-                        <img v-bind:src="product.src_link_default"
-                            class="style-image" width="326" height="489">
-                    </picture>
+
+    <div class="product" @mouseover="show_default = false" @mouseleave="show_default = true">
+        <a>
+            <router-link to="product-details">
+                <div class="gridPhoto">
+                    <div class="grid-images">
+                        <picture class="style-image">
+                            <img v-bind:src="product.src_link_default" class="style-image" width="326" height="489">
+                        </picture>
 
 
-                    <picture class="style-image_hover" 
-                        v-if="!show_default" 
-                        @mouseleave="show_default=true">
+                        <picture class="style-image_hover" v-if="!show_default" @mouseleave="show_default = true">
 
-                        <img v-bind:src="product.src_link_second"
-                            class="style-image_hover" loading="eager">
-                    </picture>
+                            <img v-bind:src="product.src_link_second" class="style-image_hover" loading="eager">
+                        </picture>
+                    </div>
+                    <div class="sizes">
+                        <span class="size_number size_number_available">39</span>
+                        <span class="size_number size_number_available">40</span>
+                        <span class="size_number size_number_available">41</span>
+                        <span class="size_number size_number_available">42</span>
+                        <span class="size_number size_number_available">43</span>
+                        <span class="size_number size_number_available">44</span>
+                        <span class="size_number size_number_available">45</span>
+                        <span class="size_number size_number_not_available">46</span>
+                    </div>
                 </div>
-                <div class="sizes">
-                    <span class="size_number size_number_available">39</span>
-                    <span class="size_number size_number_available">40</span>
-                    <span class="size_number size_number_available">41</span>
-                    <span class="size_number size_number_available">42</span>
-                    <span class="size_number size_number_available">43</span>
-                    <span class="size_number size_number_available">44</span>
-                    <span class="size_number size_number_available">45</span>
-                    <span class="size_number size_number_not_available">46</span>
+                <div class="grid-content">
+                    <p class="name">{{ product.title }}</p>
+                    <p class="price">₺{{ product.price }}</p>
+                    <p class="item-info">4 RENK</p>
                 </div>
-            </div>
-            <div class="grid-content">
-                <p class="name">{{ product.title }}</p>
-                <p class="price">₺{{ product.price }}</p>
-                <p class="item-info">4 RENK</p>
-            </div>
+            </router-link>
         </a>
     </div>
 </template>
@@ -59,32 +57,38 @@
         max-width: 25%;
     }
 }
-.sizes{
+
+.sizes {
     align-self: end;
     display: grid;
     font-size: .875em;
     grid-gap: 8px 18px;
-    grid-template-columns: repeat(auto-fill,minmax(20px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr));
     margin: 24px;
     grid-column: 1;
     grid-row: 1;
     z-index: -1;
     visibility: hidden;
 }
-.product:hover .sizes{
+
+.product:hover .sizes {
     visibility: visible;
     z-index: 2;
 }
-.size_number{
+
+.size_number {
     padding: 2% 5%;
 }
-.size_number_not_available{
+
+.size_number_not_available {
     color: #919191;
     background: url(@/assets/del-line-2.svg) 50% no-repeat;
 }
-.size_number_available:hover{
+
+.size_number_available:hover {
     text-decoration: underline;
 }
+
 .gridPhoto {
     display: grid;
     grid-template-columns: 1fr;
@@ -142,17 +146,17 @@
 <script>
 export default {
     name: "product-vue",
-    data(){
-        return{
-            show_default:true,
+    data() {
+        return {
+            show_default: true,
         }
     },
-    props:{
+    props: {
         product: {
             type: Object,
             id: Number,
             title: String,
-            price:String,
+            price: String,
             src_link_default: String,
             src_link_second: String
         }

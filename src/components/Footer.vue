@@ -1,9 +1,8 @@
 <template>
-<footer class="sc-eEVmNe illmTA">
-    <div
-        style="margin-left:-15px;margin-right:-15px;display:flex;flex-wrap:wrap;flex-grow:0;flex-shrink:0;align-items:normal;justify-content:flex-start;flex-direction:row">
-        <div style="box-sizing:border-box;min-height:1px;position:relative;padding-left:15px;padding-right:15px;width:29.166666666666668%;flex-basis:29.166666666666668%;flex-grow:0;flex-shrink:0;max-width:29.166666666666668%;margin-left:0%;right:auto;left:auto"
-            class="sc-fmdNqN hyACbC">
+<footer class="ftr">
+    <div>
+        <div
+            class="ftr-parçalar">
             <div class="sc-uxdHp fiDOnB">
                 <div class="sc-eHEENL gAtBhL">
                     <h2 class="sc-eCApnc wTYNf">Cyber Monday için Ek %10 İndirim</h2>
@@ -199,3 +198,65 @@
         </div>
     </div>
 </footer>
+</template>
+
+<style>
+
+    .ftr{
+        overflow: hidden;
+        margin-top: 4rem;
+        z-index: 1;
+        position: relative;
+        display: block;
+    }
+    element.style {
+        margin-left: -15px;
+        margin-right: -15px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 0;
+        flex-shrink: 0;
+        align-items: normal;
+        justify-content: flex-start;
+        flex-direction: row;
+    }
+    element.style {
+        box-sizing: border-box;
+        min-height: 1px;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 29.166666666666668%;
+        flex-basis: 29.166666666666668%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 29.166666666666668%;
+        margin-left: 0%;
+        right: auto;
+        left: 41.66666666666667%;
+    }
+
+    @media screen and (min-width: 1440px) {
+        .ftr-parçalar:first-child{
+            border-right: 1px solid rgb(255, 255, 255);
+            border-bottom: none;
+        }
+        
+
+
+
+
+
+        }
+   
+  
+    
+
+</style>
+
+
+<script>
+    export default{
+        name:"footer-vue"
+    }
+</script>

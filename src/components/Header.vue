@@ -1,6 +1,6 @@
 <template>
     <header class="style_headerNav__1B5VI">
-        <div class="headroom-wrapper" style="height: 42px;">
+        <div class="headroom-wrapper">
             <div style="position:relative;top:0;left:0;right:0;z-index:1;-webkit-transform:translate3D(0, 0, 0);-ms-transform:translate3D(0, 0, 0);transform:translate3D(0, 0, 0)"
                 class="headroom">
                 <div class="tnm--desktop">
@@ -201,9 +201,6 @@
         margin-right: 1.3em;
     }
 
-    .account-icon{
-        display: grid;
-    }
 
     .account-icon .label{
         position: relative;

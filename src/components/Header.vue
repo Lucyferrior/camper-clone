@@ -52,9 +52,10 @@
                         </span></div>
 
                     <div class="arama">
-                        <a href="https://www.camper.com/tr_TR/search" class="sc-dSnXvR dzBcKB last-item">
-                            <span class="searcherspan">
-                                <input type="text"
+                        <a class="sc-dSnXvR dzBcKB last-item">
+                            <RouterLink to="Search">
+                                <span class="searcherspan">
+                                    <input type="text"
                                     placeholder="ARAMA" class="searcher">
                                     <span class="searchericon">
                                         <img alt="Search"
@@ -62,6 +63,7 @@
                                         width="17px" height="17px">
                                     </span>
                                 </span>
+                            </RouterLink>
 
                         </a>
                         <a href="https://www.camper.com/tr_TR/shops" class="mağaza-bul">Mağaza bul</a>
@@ -223,8 +225,11 @@
 </style>
 
 <script>
+import { RouterLink } from 'vue-router';
+
 
     export default {
     name: "header-vue",
+    components: { RouterLink }
 }
 </script>

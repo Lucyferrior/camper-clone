@@ -32,7 +32,7 @@
                         <div class="jYnWnh"><a class="trackable "
                             href="https://www.camper.com/tr_TR/landings/new_arrivals">
                             <picture>
-                                <source
+                                <img
                                 src="https://www.camper.com/cms/api/assets/tiers-banners-homes/0065906a-fd00-43ec-abd1-01ac3e985fe2/T95-W37-SEARCH-BANNER-NEW-COLLECTION_mobile.jpg"
                                 alt="Yeni Koleksiyon" class="foto-yazı">
                             </picture>
@@ -50,7 +50,7 @@
                         <div class="jYnWnh"><a class="trackable "
                                 href="https://www.camper.com/tr_TR/women/shoes/new_arrivals_women">
                                 <picture>
-                                    <source
+                                    <img
                                         src="https://www.camper.com/cms/api/assets/tiers-banners-homes/fb9743c5-48f1-477a-82fe-310500d80f2d/T95-W37-SEARCH-BANNER-W_mobile.jpg"
                                         alt="Kadın" class="foto-yazı">
                                     </picture>
@@ -67,7 +67,7 @@
                         <div class="jYnWnh"><a class="trackable "
                                 href="https://www.camper.com/tr_TR/men/shoes/new_arrivals_men">
                                 <picture>
-                                    <source
+                                    <img
                                         src="https://www.camper.com/cms/api/assets/tiers-banners-homes/c88b0fba-5520-4766-9a3f-3e590c733cda/T95-W37-SEARCH-BANNER-M_mobile.jpg"
                                         alt="Erkek" class="foto-yazı">
                                 </picture>
@@ -83,7 +83,7 @@
                         <div class="jYnWnh"><a class="trackable "
                             href="https://www.camper.com/tr_TR/kids/shoes/new_arrivals_kids">
                             <picture>
-                                    <source
+                                    <img
                                     src="https://www.camper.com/cms/api/assets/tiers-banners-homes/784f6935-0d4e-4832-b977-989a118d409e/T95-W37-SEARCH-BANNER-K_mobile.jpg"
                                     alt="Çocuk" class="foto-yazı">
                                 </picture>
@@ -100,7 +100,7 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 .arama-geniş,.arama-geniş2{
     display: flex;
     flex-flow: row wrap;

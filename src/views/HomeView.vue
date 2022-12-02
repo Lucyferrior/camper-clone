@@ -3,6 +3,7 @@
     <HeaderVue></HeaderVue>
     <FooterVue></FooterVue>
     <FotosVue></FotosVue>
+    <SearchVue></SearchVue>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
   import HeaderVue from '@/components/Header.vue';
   import FooterVue from '@/components/Footer.vue';
   import FotosVue from '@/components/Fotos.vue';
+  import SearchVue from '@/components/Search.vue';
 
 
 export default {
@@ -17,7 +19,8 @@ export default {
   components: {
     HeaderVue,
     FooterVue,
-    FotosVue
+    FotosVue,
+    SearchVue
    
   }
 }

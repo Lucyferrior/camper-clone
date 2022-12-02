@@ -49,7 +49,7 @@
                                 </div>
                                 <ul class="ortasol-genel">
                                     <li class="liste-yazı">
-                                        <p cursor="pointer" class="wgBem">Sipariş takibi</p>
+                                        <a cursor="pointer" class="wgBem">Sipariş takibi</a>
                                     </li>
                                     <li class="liste-yazı"><a
                                             href="https://www.camper.com/tr_TR/at_cliente_faq?faq=21"
@@ -69,7 +69,7 @@
                             </div>
                             <div class="divler">
                                 <div>
-                                    <p class="hMrhVu">Müşteri hizmetleri</p>
+                                    <p class="p-class">Müşteri hizmetleri</p>
                                 </div>
                                 <ul class="erAkNO">
                                     <li class="liste-yazı"><a
@@ -87,7 +87,7 @@
                             </div>
                             <div class="divler">
                                 <div>
-                                    <p class="hMrhVu">Camper hakkinda</p>
+                                    <p class="p-class">Camper hakkinda</p>
                                 </div>
                                 <ul class="erAkNO">
                                     <li class="liste-yazı"><a
@@ -185,6 +185,9 @@
     margin-top: 4rem;
     z-index: 1;
     position: relative;
+    background-color: rgb(223, 223, 223);
+    bottom: 0;
+    position: absolute;
 }
 .üç-div{
     margin-left: -15px;
@@ -212,6 +215,7 @@
     margin-left: 0%;
     right: auto;
     left: auto;
+    border-right: 1px solid white;
 }
 .sol-fiDOnB{
     display: flex;
@@ -221,11 +225,18 @@
     height: 100%;
     padding: 40px 50px;
 }
-.sol-başlık,.eCApnc{
+.eCApnc{
     margin: 0px;
     padding: 0px;
     white-space: normal;
     font-weight: normal;
+    font-family: ModerneRegular;
+}
+.sol-başlık{
+    margin: 0px;
+    padding: 0px;
+    white-space: normal;
+    font-weight: bold;
     font-family: ModerneRegular;
 }
 @media screen and (min-width: 1440px) {
@@ -233,13 +244,14 @@
         text-shadow: unset;
         color: black;
         font-size: 1em;
+        
     }
     }
 .sol-iç{
         margin-top: 10px
     }
 @media screen and (min-width: 1440px) {
-   .sol-yazı,.sağ-yazı,.tel-no,.yakın-mgz,.mgz,.alışveriş,.wgBem,.liste-yazı2,.hMrhVu,.eCApnc{
+   .sol-yazı,.sağ-yazı,.tel-no,.yakın-mgz,.mgz,.alışveriş,.wgBem,.liste-yazı2,.p-class,.eCApnc{
         text-shadow: unset;
         color: black;
         font-size: 0.75em;
@@ -249,6 +261,7 @@
 .abone-btn{
     display: inline-block;
     margin-top: 20px;
+    color: black;
 }
 .abone-yazı{
     font-weight: normal;
@@ -261,17 +274,10 @@
     padding: 10px 20px;
     text-align: center;
     border: 1px solid black;
-    margin-top: 0px
+    margin-top: 0px;
+    color:inherit;
     
 }
-@media screen and (min-width: 1440px) {
-    .sol-yazı {
-         box-shadow: unset;
-         color: black;
-         background-color: transparent;
-         font-size: 1em;
-         }
-         }
 .sağ-div{
     box-sizing: border-box;
     min-height: 1px;
@@ -329,7 +335,10 @@
          }
 .tel-no,.mgz {
     text-decoration: underline;
-}       
+}    
+.tel-no:hover,.mgz:hover {
+    text-decoration: none;
+  }
 
 .sağ-yazı:last-child{
     margin-bottom: 0px;
@@ -396,13 +405,13 @@
     right: auto;
     left: auto;
 }
-.alışveriş,.hMrhVu{
+.alışveriş,.p-class{
     margin: 0px;
     padding: 0px;
     white-space: nowrap;
     font-weight: normal;
     font-family: ModerneMedium;
-    
+    font-weight: bold;
 }
 .open{
     position: absolute;
@@ -620,7 +629,21 @@
     color: inherit;
     text-decoration: none;
 }
+.abone-btn:hover {
+    background: black;
+    color: white;
+  }
+  .fHCHyC-crlswz{
+    justify-content: center;
+    display: flex;
+  }
 
+  .sağ-alt{
+    display:flex
+}
+.column2>.fHCHyC-crlswz{
+    display: block;
+}
 </style>
 
 <style scoped>
@@ -630,18 +653,10 @@ ul{
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
-    padding-inline-start: 40px;
 }
 li{
     display: list-item;
     text-align: -webkit-match-parent;
-}
-p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
 }
 u {
     text-decoration: underline;

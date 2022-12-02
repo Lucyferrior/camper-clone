@@ -1,12 +1,11 @@
 <template>
-<div class="banner-group1">
     <div class="koMYYi">
         <div class="kZdCIz">
             <div class="bMmwdY">
                 <div class="fZqon"><a class="trackable " href="https://www.camper.com/tr_TR/landings/teix">
                         <picture>
                             <img
-                                src="https://www.camper.com/cms/api/assets/tiers-banners-homes/d550c529-8ffd-4468-8396-142fdacbd92d/T95_W45_T176+T875_LANDINGS_W_TEIX_mobile.jpg"
+                                src="https://www.camper.com/cms/api/assets/tiers-banners-homes/916bb380-d224-4ffd-a582-e0228d08cee9/T95-W46-TEIX-W-M_Desktop.jpg"
                                 alt="Teix" width="2000px" height="1125px"
                                 class="foto">
                         </picture>
@@ -22,19 +21,12 @@
             </div>
         </div>
     </div>
-</div>
 </template>
 <style>
-    .banner-group1{
-        width: 100%;
-        height: 100%;
-    }
+
     .koMYY{
         position: relative;
         display: grid;
-    }
-    .kZdCIz{
-        max-width: 1536px;
     }
     .bMmwdY{
         display: grid;
@@ -57,7 +49,7 @@
         display: block;
     }
     .yazı-content-center{
-        z-index: 10;
+    z-index: 10;
     position: absolute;
     width: 100%;
     left: 50%;

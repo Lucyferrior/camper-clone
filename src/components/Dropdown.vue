@@ -173,8 +173,8 @@
 
 }
 .link,.column-double>a,.column2>a{
-  font-size: 0.875rem;
-  margin: 0px;
+    font-size: 0.875rem;
+    margin: 0px;
     padding: 0px;
     white-space: normal;
     font-weight: normal;
@@ -217,14 +217,6 @@
 </style>
 
 <style scoped>
-ul {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-}
 li {
   display: list-item;
   text-align: -webkit-match-parent;

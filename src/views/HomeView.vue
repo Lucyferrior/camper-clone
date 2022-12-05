@@ -3,7 +3,7 @@
     <HeaderVue></HeaderVue>
     <FooterVue></FooterVue>
     <FotosVue></FotosVue>
-    <DropdownVue></DropdownVue>
+    
   </div>
 </template>
 
@@ -11,7 +11,7 @@
   import HeaderVue from '@/components/Header.vue';
   import FooterVue from '@/components/Footer.vue';
   import FotosVue from '@/components/Fotos.vue';
-  import DropdownVue from '@/components/Dropdown.vue';
+
 
 export default {
   name: 'HomeView',
@@ -19,7 +19,7 @@ export default {
     HeaderVue,
     FooterVue,
     FotosVue,
-    DropdownVue,
+   
   }
 }
 </script>

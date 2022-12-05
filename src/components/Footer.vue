@@ -179,7 +179,7 @@
     </footer>
 </template>
 
-<style>
+<style scoped>
 .ftr{
     overflow: hidden;
     margin-top: 4rem;

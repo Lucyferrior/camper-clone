@@ -21,9 +21,10 @@
                                     Kadın
                                 </router-link>
                             </a>
-
-
+                            <Dropdown></Dropdown>
                         </span></div>
+                        
+
                     <div class="alt_kategoriler"><span class="tnm__title "><a
                                
                                 class="kategori-isim "> 
@@ -72,11 +73,16 @@
                         
                     </div>
                 </div>
+                
             </div>
         </div>
     </header>
 </template>
 <style>
+.tnm__title:hover .highlights{
+    display: flex;
+    height: 500px;
+    }
 .headroom{
 
         position: relative;
@@ -223,8 +229,11 @@
 </style>
 
 <script>
+import Dropdown from './Dropdown.vue';
+
 
     export default {
     name: "header-vue",
+    components: { Dropdown }
 }
 </script>
